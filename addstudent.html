@@ -6,22 +6,24 @@
     <title>Add Students</title>
 </head>
 <body>
+    <nav>
     <center>
         <a href = "dashboard.html">Dashboard</a>
         <a href = "viewstudent.html">View Students</a>
         <a href = "logout.html">Logout</a>
 
     </center>
+    </nav>
 
     <h2>Enter Student Details</h2>
-    <form>
+    <form action="viewstudent.html" onsubmit="true" method="post">
         <div>
         <label for="name"><b>Enter Student Name </b>:</label>
-        <input type="text" id="name" placeholder="Student name" name="name"></div>
+        <input type="text" id="name" placeholder="Student name" required name="name"></div>
         <br>
          <div>
         <label for="id"><b>Enter Student ID </b>:</label>
-        <input type="number" id="id" placeholder="Student ID" name="id"></div>
+        <input type="number" id="id" placeholder="Student ID" required name="id"></div>
         <br>
          <div>
         <label for="grade"><b>Enter Student Grade </b>:</label>

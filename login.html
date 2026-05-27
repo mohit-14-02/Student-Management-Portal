@@ -6,26 +6,27 @@
     <title>Login</title>
 </head>
 <body>
+    <nav>
         <center>
         <a href = "index.html">Home</a>
         <a href = "login.html">Login</a>
         <a href = "register.html">Register</a>
     </center>
+    </nav>
     <center>
         <h1>Login</h1>
      </center>
      <br>
-    <form>
+    <form action="dashboard.html" onsubmit="return true" method="post">
         <div>
         <label for="Username"><b>Username </b>:</label>
-        <input type="text" id="Username" placeholder="Enter Username" name="Username"></div>
+        <input type="text" id="Username" required placeholder="Enter Username" required name="Username"></div>
     <br>
         <div><label for = "Password"><b>Password</b> : </label>
-        <input type="password" id="Password" placeholder="Enter Password" name="Password"></div>
-        <center>
-            <a href = "dashboard.html"><button type="button">Login</button>
-            </a>
-        </center>
+        
+            <input type="password" id="Password" required placeholder="Enter Password" name="Password"></div>
+        <br>
+        <center><button type="submit">Login</button></center>
 
 
     </form>
