@@ -4,6 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0%;
+            background-color:burlywood
+        }
+        nav{
+            width: 100%;
+            background-color:cornsilk;
+            font-size: large;
+            font-weight: 500;
+            padding: 15px; /* reset */
+        }
+
+        nav::before{
+            content: "";
+            display:block;
+            height: 18px;
+        }
+        nav a{
+            text-decoration:none;
+            color:brown;
+            font-weight:600;
+            margin:15px;
+            border-radius:50px;
+            padding:12px 22px; /* bigger like register */
+            display:inline-block;
+            transition: background-color .2s ease, transform .08s ease;
+        }
+        nav a:hover{
+            background-color:bisque;
+
+        }
+        .log{
+            width: 440px; /* match register */
+            max-width: calc(100% - 32px);
+            height: max-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border: 3px solid goldenrod;
+            background-color: blanchedalmond;
+            border-radius: 20px;
+            padding: 22px 18px;
+            margin: 70px auto 0 auto; /* centers the box */
+        }
+
+        form{
+            display: flex;
+            justify-content: center;
+        }
+        .log button{
+            background-color:darkgoldenrod;
+            font-size: large;
+            margin-bottom: 30px;
+            border-radius: 25px;
+
+        }
+        form button:hover{
+            background-color:bisque
+        }
+        *{ box-sizing:border-box; }
+
+        form input{
+            width: 100%;
+            border-radius: 999px;
+            padding: 12px 14px;
+            border: 1.5px solid rgba(0,0,0,0.15);
+            outline:none;
+            font-size:15px;
+            background:#fff;
+        }
+
+        form input:focus{
+            border-color:#d49a2a;
+            box-shadow:0 0 0 4px rgba(212,154,42,0.2);
+        }
+        
+
+
+    </style>
 </head>
 <body>
     <nav>
@@ -13,22 +95,22 @@
         <a href = "register.html">Register</a>
     </center>
     </nav>
-    <center>
+    <form action="dashboard.html" onsubmit="return true" method="post">
+        <div class="log"><center>
         <h1>Login</h1>
      </center>
-     <br>
-    <form action="dashboard.html" onsubmit="return true" method="post">
-        <div>
-        <label for="Username"><b>Username </b>:</label>
+     <br><div>
+        <label for="Username"><b>Username </b>:</label><br>
         <input type="text" id="Username" required placeholder="Enter Username" required name="Username"></div>
     <br>
-        <div><label for = "Password"><b>Password</b> : </label>
+        <div><label for = "Password"><b>Password</b> : </label><br>
         
             <input type="password" id="Password" required placeholder="Enter Password" name="Password"></div>
         <br>
         <center><button type="submit">Login</button></center>
 
-
+     
+        </div>
     </form>
     
 </body>

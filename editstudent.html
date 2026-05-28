@@ -4,40 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Students</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            background-color:burlywood;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        nav{
+            width:100%;
+            background-color:cornsilk;
+            padding: 20px 15px;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        nav a{
+            text-decoration:none;
+            color:brown;
+            font-weight:600;
+            margin:15px;
+            border-radius:50px;
+            padding:10px 16px;
+            display:inline-block;
+            transition: background-color .2s ease, transform .08s ease;
+        }
+
+        nav a:hover{
+            background-color:bisque;
+            transform: translateY(-1px);
+        }
+
+        .wrap{
+            width: min(650px, calc(100% - 32px));
+            margin: 60px auto 0 auto;
+            background-color: blanchedalmond;
+            border: 3px solid goldenrod;
+            border-radius: 20px;
+            padding: 28px 22px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .wrap h2{
+            margin:0 0 14px;
+            color:#7a3f00;
+            text-align:center;
+        }
+
+        *{ box-sizing:border-box; }
+
+        form{ margin-top: 10px; }
+
+        .field{ margin-top: 14px; }
+
+        .field label{
+            display:block;
+            font-weight:700;
+            color:#6b2f00;
+            margin-bottom:6px;
+        }
+
+        .wrap input{
+            width:100%;
+            padding: 12px 14px;
+            border-radius: 999px;
+            border: 1.5px solid rgba(0,0,0,0.15);
+            outline:none;
+            font-size:15px;
+            background:#fff;
+            transition: border-color .2s ease, box-shadow .2s ease;
+        }
+
+        .wrap input:focus{
+            border-color:#d49a2a;
+            box-shadow:0 0 0 4px rgba(212,154,42,0.2);
+        }
+
+        .actions{
+            margin-top: 18px;
+            display:flex;
+            justify-content:center;
+        }
+
+        .wrap button{
+            width: 220px;
+            max-width: 100%;
+            padding: 12px 16px;
+            border-radius: 999px;
+            border: none;
+            background-color: darkgoldenrod;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: background-color .2s ease, transform .08s ease;
+        }
+
+        .wrap button:hover{
+            background-color:bisque;
+            color:#7a3f00;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 480px){
+            .wrap{ margin-top: 30px; padding: 22px 16px; }
+        }
+    </style>
 </head>
 <body>
     <nav>
-    <center>
-        <a href="dashboard.html">Dashboard</a>
-        <a href = "addstudent.html">Add Students</a>
-        <a href = "viewstudent.html">View Students</a>
-        <a href = "logout.html">Logout</a>
-
-    </center>
-    </nav>
-    <br>
-    <h1>Edit Student</h1>
-    <form action="dashboard.html" onsubmit="true" method="post">
-        <div>
-        <label for="id"><b>Student ID</b> :</label>
-        <input type="number" id="id" required placeholder="Student ID" name="id">
-        </div><br>
-        <div>
-        <label for="name"><b>Student Name</b> :</label>
-        <input type="text" id="id" required placeholder="Student Name"  name="name">
-        </div><br>
-        <label for="grade"><b>Student Grade</b> :</label>
-        <input type="text" id="id" placeholder="Student Grade" required name="grade">
-        <br>
-        <br>
         <center>
-            <button type="submit">Edit</button>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="addstudent.html">Add Students</a>
+            <a href="viewstudent.html">View Students</a>
+            <a href="logout.html">Logout</a>
         </center>
+    </nav>
 
+    <div class="wrap">
+        <h2>Edit Student</h2>
 
+        <form action="dashboard.html" onsubmit="true" method="post">
+            <div class="field">
+                <label for="id"><b>Student ID</b></label>
+                <input type="number" id="id" required placeholder="Student ID" name="id" />
+            </div>
 
-    </form>
-    
-    
+            <div class="field">
+                <label for="name"><b>Student Name</b></label>
+                <input type="text" id="name" required placeholder="Student Name" name="name" />
+            </div>
+
+            <div class="field">
+                <label for="grade"><b>Student Grade</b></label>
+                <input type="text" id="grade" placeholder="Student Grade" required name="grade" />
+            </div>
+
+            <div class="actions">
+                <button type="submit">Edit</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
